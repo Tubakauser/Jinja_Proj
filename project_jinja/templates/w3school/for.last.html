@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for_last</title>
+</head>
+<body>
+
+<ul>
+  {% for x in fruits %}
+    <li
+    {% if forloop.last %}
+      style='background-color:lightblue;'
+    {% endif %}
+    >{{ x }}</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for_parent</title>
+</head>
+<body>
+
+<ul>
+  {% for x in cars %}
+    <li>{{ x }}:
+      <ul>
+        {% for y in colors %}
+          <li>
+            {{ forloop.parentloop.counter }}
+            {{ y }}
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+</body>
+</html>
